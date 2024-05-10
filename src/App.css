@@ -1,0 +1,46 @@
+body {
+  background-color: aliceblue;
+}
+.App {
+  margin: 10px auto;
+}
+.App > h2 {
+  text-align: center;
+  text-transform: capitalize;
+  color: #009688;
+  font-size: 2rem;
+}
+.products-parent {
+  background-color: #eee;
+  margin: 20px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+.pagination {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pagination span {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  background-color: #03a9f4;
+  color: white;
+
+  margin-left: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+}
+
+.pagination span:first-child,
+.pagination span:last-child {
+  background-color: transparent;
+  font-size: 26px;
+}
