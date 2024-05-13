@@ -24,7 +24,13 @@ function App() {
   };
 
   const handlePageChange = (pageNumber) => {
-    setPage(pageNumber);
+    if (pageNumber < 1) {
+      setPage(Math.ceil(products.length / productsPerPage));
+    } else if (pageNumber > Math.ceil(products.length / productsPerPage)) {
+      setPage(1);
+    } else {
+      setPage(pageNumber);
+    }
     handleGoUp();
   };
 
